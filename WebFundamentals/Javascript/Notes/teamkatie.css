@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#about img {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+#about h3 {
+  width: 80%;
+  background-color: blue;
+  margin: 0 auto;
+}
+
+#about h3 span:first-child {
+  color: purple;
+}
+
+#about h3 span {
+  color: yellow;
+}
+
+#about p {
+  width: 80%;
+  background-color: orange;
+  margin: 0 auto;
+}
+
+h1, nav {
+  text-align: center;
+  margin: 10px;
+}
+
+h4 {
+  margin: 10px;
+}
+
+#information {
+  margin: 0 auto;
+  width: 80%;
+}
+
+table, th, td, tr {
+  border: solid black 1px;
+  padding: 2px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+
+label, input {
+  display: block;
+  margin: 10px;
+}
+
+ul {
+  display: inline-block;
+}
+
+footer {
+  background: green;
+  width: 80%;
+  margin: 0 auto;
+}

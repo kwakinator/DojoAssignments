@@ -1,0 +1,52 @@
+/* Basic Reset */
+*{
+  margin: 0px;
+  padding: 0px;
+  outline: red dotted;
+}
+
+
+body{
+  background-color: beige;
+}
+
+nav, main, footer, h1{
+  width: 70%;
+  margin: 0 auto;
+  background-color: rgb(50, 200,150);
+}
+
+#about img{
+  height: 150px;
+  width: auto;
+  display: inline-block;
+  float: left;
+}
+
+#about h3,p{
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+}
+
+#information{
+  margin-top: 10px;
+  background-color: beige;
+}
+
+#information div,table,form{
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+  clear: none;
+  margin: 0 auto;
+}
+
+#information #interests,h5{
+  display: block;
+}
+
+#sitemap ul{
+  display:inline-block;
+  vertical-align: top;
+}

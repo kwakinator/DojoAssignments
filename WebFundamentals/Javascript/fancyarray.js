@@ -1,6 +1,5 @@
 var array = ["James", "Jill", "Jane", "Jack"];
 var symbol = [" -> ", " => ", " :: ", " ---- "]
-var reversed = true
 
 function printArray(reversed){
   if(reversed == true){
@@ -14,4 +13,4 @@ function printArray(reversed){
     }
   }
 }
-printArray(false);
+printArray(true);

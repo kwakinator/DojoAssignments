@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Working with jQuery Functions</title>
+    <style>
+      span{
+        color: green;
+        font-weight: bold;
+        border: 3px dotted yellow;
+      }
+      .selected{
+        color: blue;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        alert('Warning: Serious jQuery Action Ahead')
+
+        $('#dontPush').click(function(){
+          $('p:first').text("¯\_(ツ)_/¯");
+        })
+
+        $('#push').click(function(){
+          $('p:first').text("Chase laser pee in the shoe yet intently sniff hand, or eat the fat cats food yet sit on human milk the cow. Leave dead animals as gifts hunt anything that moves mrow or get video posted to internet for chasing red dot hack up furballs sit by the fire.");
+        })
+
+        $("#face").click(function() {
+          $( "#toggle p" ).toggle();
+        });
+
+        $("#content h3:first").hover(function(){
+          $('#content p:first').slideDown('slow',function(){
+          })
+        })
+
+        $( "#content h2" ).hover(function(){
+          $( "#content p:last").slideUp( "slow",function(){
+          })
+        })
+
+        $( "#loading" ).click(function() {
+          $( "#image" ).slideToggle( "slow", function() {
+          });
+        });
+
+        $('#hide').click(function(){
+          $('p').hide();
+        })
+
+        $('#show').click(function(){
+          $('p').show();
+        })
+
+        $("h4").hover(function(){
+          $('span').fadeIn('slow');
+        })
+
+        $( "p" ).last().addClass( "selected" );
+
+        $('h1').after('<b>^̮^</b>')
+      })
+    </script>
+  </head>
+  <body>
+      <div id="container">
+        <header>
+          <h1>Functioning with jQuery Works</h1>
+        </header>
+        <div id="main_content">
+          <h2>Where to begin..</h2>
+          <h4>Meow</h4>
+          <p>Chase laser pee in the shoe yet intently sniff hand, or eat the fat cats food yet sit on human milk the cow. Leave dead animals as gifts hunt anything that moves mrow or get video posted to internet for chasing red dot hack up furballs sit by the fire.  </p>
+          <button id="dontPush">Don't push me!</button>
+          <button id="push">You pushed, didn't you?</button>
+          <div id="content">
+            <h3>Content</h3>
+            <p>Caticus cuteicus hide at bottom of staircase to trip human and caticus cuteicus roll on the floor purring your whiskers off. <span style= "display: none">MEOW</span> Chew foot present belly, scratch hand when stroked for walk on car leaving trail of paw prints on hood and windshield. Kitty! kitty! plays league of legends.</p>
+            <button id="rightMeow">Right About Meow</button>
+            <h3>More Content</h3>
+            <p>Roll on the floor purring your whiskers off see owner, run in terror hunt by meowing loudly at 5am next to human slave food dispenser pushes butt to face. <span style= "display: none">MEOW</span> Purr when being pet lie in the sink all day.</p>
+            <h3>More Subcontents</h3>
+            <p>See owner, run in terror mewl for food at 4am and shove bum in owner's face like camera lens. Leave fur on owners clothes sit by the fire, or cats making all the muffins meow to be let in for meow, but why must they do that. <span style= "display: none">MEOW</span> Instantly break out into full speed gallop across the house for no reason a nice warm laptop for me to sit on intently stare at the same spot.</p>
+
+          <div id="toggle">
+            <button id="face"> Change Faces!</button>
+            <p>ಠ_ಠ</p>
+            <p style="display: none">ಠoಠ</p>
+
+          <h2>Miscellaneous</h2>
+          <p>Sit in box chase the pig around the house. Eats owners hair then claws head meowwww, or intently stare at the same spot hide at bottom of staircase to trip human sleep in the bathroom sink hack up furballs. </p>
+        </div>
+        <button id="loading">Loading...</button>
+        <img id= "image" src="loading.jpg" alt="Loading jpg" style= "display:none">
+        </div>
+          <button id="hide">Collapse</button>
+          <button id="show">Expand</button>
+        </div>
+      </div>
+  </body>
+</html>

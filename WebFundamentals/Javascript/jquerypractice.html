@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>explore jquery</title>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      console.log('you did get jquery here!')
+      console.log($('body').children().first());
+
+      $('button').click(function(e){
+        $('#board').append('<p>YOYOYOYOYO!')
+      })
+
+      $('p').click(function(){
+        console.log('you clicked on a p tag!');
+      })
+
+      $(document).on
+    })
+  </script>
+  </head>
+  <body>
+    <div id="board">
+      <button type="button" name="button">pooosh miii!</button>
+    </div>
+  </body>
+</html>
+
+//e is information about the event
+//what kind of event it was: if default was prevented, time stamp, type, etc.
+//X and Y coordinates helpful for circles/games to move a unit there
+//types of events: pushing keys down,doc finishing loading, let th key up, mouse-down, up, click.

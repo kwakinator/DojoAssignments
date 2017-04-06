@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    function attach_addUser_handlers() {
+        $('button').click(function() {
+          var firstName = $("#f_name").val();
+          var lastName = $("#l_name").val();
+          var email = $("#emailAdd").val();
+          var phoneNumber = $("#phone").val();
+          var userInfo = "<tr><td>" + firstName + "</td><td>" + lastName + "</td><td>" + email + "</td><td>" + phoneNumber + "</td></tr>";
+          $("table tbody").append(userInfo);
+      });
+    }
+
+      $(document).ready(function(){
+        attach_addUser_handlers();
+      })
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="table">
+        <table>
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email Address</th>
+              <th>Contact #</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+      <div id="addUser">
+        <h1>Add User</h1>
+        <form  action="index.html" method="post">
+          First Name: <input id="f_name" type="text" name="first_name" value="First Name">
+          Last Name: <input id="l_name" type="text" name="last_name" value="Last Name">
+          Email Address: <input id="emailAdd" type="text" name="email" value="Email Address">
+          Contact #: <input id="phone" type="text" name="phone_number" value="Phone #">
+        </form>
+        <button type="button" id="addUser">Add User</button>
+      </div>
+    </div>
+  </body>
+</html>

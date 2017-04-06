@@ -1,0 +1,50 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+#container{
+  width: 970px;
+  margin-left: 10%;
+}
+
+#table{
+  display: inline-block;
+}
+
+table{
+  border: 2px solid black;
+}
+
+th{
+  font-weight: bold;
+  padding-right: 50px;
+}
+
+
+h1{
+  border-bottom: 2px solid gray;
+  width: 35%;
+  margin-top: 5%;
+}
+
+form{
+  font-size: 17px;
+  margin-top: 5%;
+  padding: 5px;
+  padding-left: 8%;
+  width: 260px;
+  display: inline-block;
+  text-align: right;
+}
+
+input[type=text]{
+  font-size: 14px;
+  font-family: serif;
+}
+
+button{
+  display: block;
+  margin-left: 29%;
+  margin-top: 5px;
+}

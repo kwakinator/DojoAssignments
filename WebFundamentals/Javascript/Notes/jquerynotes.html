@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var dojo = "message for the console";
+
+        console.log(dojo);//will post in console of page and can also tell you about data.
+
+        var array = [1,2,3,4, 'thing1', 'thing2'];
+
+        console.log(array);
+
+        $('a').click(function(){
+          alert("you are now leaving the page")
+        })
+
+        // // effects methods-- they toggle the visibility property of items
+        //can do something upon page load
+        $('p').hide();
+
+        $('#hide').click(function(){
+          $('p').hide();
+        })
+
+        $('#show').click(function(){
+          $('p').show();
+        })
+
+        //manipulation methods add/change either text or html to your document
+        $('h3').hover(function(){  //changes something on h2.text when hovering //takes two functions - 1st is what happens when you hover. 2nd can invoke once first is completed
+          $('h2').text('go and see the Space Needle!');
+        }, function(){ $('h2').text('Seattle, Washington')})
+
+        $('.append').click(function(){
+          $('.result').append('<h4>.append adds HTML!</h4>')
+        })
+
+        //css methods
+        //every button will have its css property changed
+        $('button').click(function(){
+          $('button').css('background-color', 'yellow');
+        })
+
+        $('body').click(function(){
+          //more code
+        });
+
+      });
+
+
+
+    </script>
+  </head>
+  <body>
+    <div class="result"></div>
+
+    <p>This is a paragraph!</p>
+
+    <p>This is also a paragraph!</p>
+    <button id="hide">This will hide all paragraphs</button>
+    <button id="show">This will show all paragraphs</button>
+    <a id="mylink" href="www.google.com">Go to Google!</a>
+    <h3>Mountain View, California</h3>
+    <h2>Seattle, Washington</h2>
+    <button class="append" name="button">Click to see .append work!</button>
+    <div class="result"></div>
+  </body>
+</html>
