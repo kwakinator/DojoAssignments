@@ -1,0 +1,18 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: serif;
+}
+
+#container{
+  background: black;
+  color: yellow;
+}
+
+h1{
+  color: green;
+}
+
+img{
+  height: 300px;
+}

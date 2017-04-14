@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ninjastyles.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/ninjascript.js') }}"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h2>What is a {{name}}?</h2>
+      <p>A {{name}} (忍者) or shinobi (忍び) was a covert agent or mercenary in feudal Japan. The functions of the ninja included espionage, sabotage, infiltration, assassination and guerrilla warfare.</p>
+      <img id = "ninja" src="{{ url_for('static', filename='img/ninja.jpg') }}">
+    </div>
+  </body>
+</html>
