@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Survey</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Dojo Survey</h1>
+
+      <form action="/result" method="post">
+        <label for="name">Your Name: </label>
+        <input type="text" name="name" value="Name">
+        <label for="location">Location:</label>
+        <select name="location">
+          <option value="seattle">Seattle</option>
+          <option value="silicon">Silicon Valley</option>
+          <option value="dc">Washington DC</option>
+          <option value="online">Online</option>
+        </select>
+        <label for="language">Favorite Language: </label>
+        <select name="language">
+          <option value="python">Python</option>
+          <option value="ruby">Ruby</option>
+          <option value="js">Javascript</option>
+          <option value="php">PHP</option>
+        </select>
+        <label for="comment">Comment(optional):</label>
+        <input type="textarea" name="comment" value="">
+        <input type="submit" value="Submit">
+      </form>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p class='error'>{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <a href="/clear">Clear Session</a>
+    </div>
+  </body>
+</html>

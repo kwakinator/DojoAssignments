@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Gold</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h4>Your Gold: {{session['gold']}}</h4>
+      <div class="places">
+        <h3>Farm</h3>
+        <p>(earns 10-20 golds)</p>
+        <form action="/process_money" method="post">
+          <input type="hidden" name="building" value="farm">
+          <button type="submit" name="submit">Find Gold!</button>
+        </form>
+      </div>
+      <div class="places">
+        <h3>Cave</h3>
+        <p>(earns 5-10 golds)</p>
+        <form action="/process_money" method="post">
+          <input type="hidden" name="building" value="cave">
+          <button type="submit" name="submit">Find Gold!</button>
+        </form>
+      </div>
+      <div class="places">
+        <h3>House</h3>
+        <p>(earns 2-5 golds)</p>
+        <form action="/process_money" method="post">
+          <input type="hidden" name="building" value="house">
+          <button type="submit" name="submit">Find Gold!</button>
+        </form>
+      </div>
+      <div class="places">
+        <h3>Casino</h3>
+        <p>(earns/takes 0-50 golds)</p>
+        <form action="/process_money" method="post">
+          <input type="hidden" name="building" value="casino">
+          <button type="submit" name="submit">Find Gold!</button>
+        </form>
+      </div>
+      <div class="activities">
+        {% for turn in session['log']: %}
+          {% if turn['earnings'] < 0 %}
+            <p class="red">Entered a {{turn['building']}} and lost {{turn['earnings']}} golds. Ouch.. {{turn['time']}}</p>
+          {% elif turn['earnings'] > 0: %}
+            <p class='green'>Earned {{turn['earnings']}} from the {{turn['building']}}! {{turn['time']}} </p>
+          {% endif %}
+        {% endfor %}
+
+      </div>
+      <a href="/reset">Reset</a>
+    </div>
+  </body>
+</html>

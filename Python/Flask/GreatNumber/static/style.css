@@ -1,0 +1,17 @@
+.red{
+  background-color: red;
+}
+
+.green{
+  background-color: green;
+}
+
+html, body, .container{
+  height: 100%;
+}
+
+.container{
+  display: flex;
+  align-items: right;
+  justify-content: center;
+}
