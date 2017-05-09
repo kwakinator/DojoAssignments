@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Wall</title>
+  </head>
+  <body>
+
+    <h3>Post a Message</h3>
+    <form action="/message" method="post">
+      <textarea name="message" rows="3" cols="80"></textarea>
+      <input type="submit" value="Post">
+    </form>
+    {% for message in messages %}
+      <h3>{{message['user_name']}} - {{message['created_at']}}</h3>
+      <p>{{message['message']}}</p>
+      {% for comment in comments %}
+        {% if message['id'] == comment['message_id'] %}
+        <h4>{{comment['user_name']}} - {{comment['created_at']}}</h4>
+        <p>{{comment['comment']}}</p>
+        {% endif %}
+      {% endfor %}
+      <h4>Post a Comment</h4>
+      <form action="/comment/{{message['id']}}" method="post">
+        <textarea name="comment" rows="2" cols="70"></textarea>
+        <input type="submit" value="Post">
+      </form>
+    {% endfor %}
+    <form action="/clear" method="post">
+      <button type="submit" name="button">Log Out</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Delete Info?</title>
+  </head>
+  <body>
+    <h3>Are you sure you want to delete friend information?</h3>
+    <h2>{{friend['first_name']}} {{friend['last_name']}}</h2>
+    <h2>{{friend['email']}}</h2>
+    <form action="/friends/{{friend['id']}}/delete" method="POST">
+      <input type="hidden" name="friend_id" value="{{friend['id']}}">
+      <button type="submit" name="button">YES DELETE!</button>
+    </form>
+    <a href="/">Back</a>
+  </body>
+</html>
